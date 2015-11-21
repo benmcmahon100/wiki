@@ -1,6 +1,6 @@
 import React from 'react';
 import DocumentTitle from 'react-document-title';
-
+import { link } from 'gatsby-helpers';
 import typography from './utils/typography';
 const { TypographyStyle } = typography;
 
@@ -73,7 +73,7 @@ module.exports = React.createClass({
         </head>
         <body className="landing-page">
           <div id="react-mount" dangerouslySetInnerHTML={{__html: this.props.body}} />
-          <script src={`${urlPrefix}/bundle.js`}/>
+          <script src={`link(/bundle.js)`}/>
         </body>
       </html>
     );
